@@ -62,11 +62,42 @@ $superheroes = [
       "biography" => "Notably powerful, Wanda Maximoff has fought both against and with the Avengers, attempting to hone her abilities and do what she believes is right to help the world.",
   ], 
 ];
+//echo strlen($_POST['name']);
+//echo $superheroes[9]['name'];
+$flag = False;
+for($x=0; $x<=9; $x++){
+  if ($superheroes[$x]['name']==$_POST['name']){
+    $flag = True;
+    break;
+  }
+}
 
+if($flag){
+  foreach($superheroes as $h){
+      if ($h['name'] == $_POST['name']){
+        echo $h['biography'];
+        break;
+      }
+  }
+}
+else{
+  if (strlen($_POST['name'])==0){
+  foreach($superheroes as $h){
+    echo "<li>".$h['name']."</li>";
+    }
+  }
+}
+/*if (strlen($_POST['name'])==0){
+  foreach($superheroes as $h){
+    echo $h['name'];
+  }
+}else{
+  foreach($superheroes as $h){
+      if ($h['name'] == $_POST['name']){
+        echo $h['biography'];
+        break;
+      }
+  }
+}*/
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>

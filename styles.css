@@ -1,11 +1,38 @@
-/*
-	Comment
-*/
+.container {
+	display: flex;
+	background-color: #3498DB;
+	color: white;
+	height: 100px;
+	justify-content: center;
+	margin: 5px;
+}
+#box{
+	border: solid;
+	height: 500px;
+	background-color: #EBEDEF;
+}
+#box1{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-items: left;
+}
+section{
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+}
+form{
+	display: flex;
+	align-items: flex-end;
+}
 
-a { /* Comment */ color: /* Comment */ Red; }
+#button{
+	float: right;
+	height: 22px;
+	background-color: #EC7063;
 
-.TestClass {
-	color: Black;
-	background-color: White;
-	text-align: left;
+}
+#name{
+	width: 500px;
 }
