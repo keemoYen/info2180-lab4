@@ -36,5 +36,11 @@ form{
 #name{
 	width: 500px;
 }
-#result{
+h3{
+	margin: 0px;
+	padding: 0px;
+}
+h4{
+	margin: 0px;
+	padding: 0px;
 }

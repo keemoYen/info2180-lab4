@@ -22,8 +22,6 @@ window.onload =function(){
 		if(httpRequest.readyState === XMLHttpRequest.DONE){
 			if(httpRequest.status=== 200){
 				var response = httpRequest.responseText;
-				//var qoute = document.querySelector(#qoute);
-				//window.alert(response);
 				var display = document.querySelector('#display');
 				display.innerHTML = response;
 			}

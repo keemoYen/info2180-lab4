@@ -62,8 +62,7 @@ $superheroes = [
       "biography" => "Notably powerful, Wanda Maximoff has fought both against and with the Avengers, attempting to hone her abilities and do what she believes is right to help the world.",
   ], 
 ];
-echo strlen($_POST['name']);
-//echo $superheroes[9]['name'];
+
 $flag = False;
 for($x=0; $x<=9; $x++){
   if ($superheroes[$x]['name']==$_POST['name']){
@@ -71,14 +70,20 @@ for($x=0; $x<=9; $x++){
     break;
   }
 }
-
+echo $flag;
 if($flag){
   foreach($superheroes as $h){
       if ($h['name'] == $_POST['name']){
-        echo $h['biography'];
+        echo "<h3>".$h['name']."</h3>"."<br>";
+        echo "<h4>"."A.K.A ".$h['alias']."</h4>"."<br>";
+        echo "<br>";
+        echo "<p>".$h['biography']."</p>";
         break;
       }
   }
+}
+elseif($flag ==False){
+  echo "Superhero not found";
 }
 else{
   if (strlen($_POST['name'])==0){
@@ -87,17 +92,6 @@ else{
     }
   }
 }
-/*if (strlen($_POST['name'])==0){
-  foreach($superheroes as $h){
-    echo $h['name'];
-  }
-}else{
-  foreach($superheroes as $h){
-      if ($h['name'] == $_POST['name']){
-        echo $h['biography'];
-        break;
-      }
-  }
-}*/
+
 ?>
 
