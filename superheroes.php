@@ -62,7 +62,7 @@ $superheroes = [
       "biography" => "Notably powerful, Wanda Maximoff has fought both against and with the Avengers, attempting to hone her abilities and do what she believes is right to help the world.",
   ], 
 ];
-//echo strlen($_POST['name']);
+echo strlen($_POST['name']);
 //echo $superheroes[9]['name'];
 $flag = False;
 for($x=0; $x<=9; $x++){
