@@ -65,15 +65,14 @@ $superheroes = [
 
 $flag = False;
 for($x=0; $x<=9; $x++){
-  if ($superheroes[$x]['name']==$_POST['name']){
+  if ($superheroes[$x]['name']==$_POST['name'] or $superheroes[$x]['alias']==$_POST['name']){
     $flag = True;
     break;
   }
 }
-echo $flag;
 if($flag){
   foreach($superheroes as $h){
-      if ($h['name'] == $_POST['name']){
+      if ($h['name'] == $_POST['name'] or $h['alias']==$_POST['name']){
         echo "<h3>".$h['name']."</h3>"."<br>";
         echo "<h4>"."A.K.A ".$h['alias']."</h4>"."<br>";
         echo "<br>";
@@ -82,15 +81,13 @@ if($flag){
       }
   }
 }
-elseif($flag ==False){
-  echo "Superhero not found";
-}
-else{
-  if (strlen($_POST['name'])==0){
+elseif (strlen($_POST['name'])==0){
   foreach($superheroes as $h){
     echo "<li>".$h['name']."</li>";
     }
   }
+elseif($flag ==False){
+  echo "Superhero not found";
 }
 
 ?>
